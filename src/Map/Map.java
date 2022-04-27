@@ -1,6 +1,7 @@
 package Map;
 
 import Ants.Queen;
+import Ants.Workers;
 
 
 public class Map {
@@ -105,6 +106,45 @@ public class Map {
                 }
                 else
                     onecase.PositionFood(food);
+            }
+        }
+    }
+
+    public void addAntHill(Queen queen)
+    {
+        for(Case onecase :this.matrice)
+        {
+
+            if ( onecase.GetPositionX() == queen.GetPositionX() && onecase.GetPositionY()==queen.GetPositionY())
+            {
+                onecase.AntHillPosition();
+            }
+        }
+    }
+
+    public int addSoldat(Workers workers)
+    {
+        int check ;
+        for(Case onecase :this.matrice)
+        {
+
+            if ( onecase.GetPositionX() == workers.GetPositionX() && onecase.GetPositionY()==workers.GetPositionY())
+            {
+                check= onecase.FightersPosition(workers);
+                return check;
+            }
+        }
+        return 1;
+    }
+
+    public void removeWorkers(Workers workers)
+    {
+        for(Case onecase :this.matrice)
+        {
+
+            if ( onecase.GetPositionX() == matrice.GetPositionX() && onecase.GetPositionY()==matrice.GetPositionY())
+            {
+                onecase.DeletePositionFighters(workers);
             }
         }
     }
