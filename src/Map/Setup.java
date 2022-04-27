@@ -12,8 +12,8 @@ public class Setup {
     private int food;
     private int hp;
 
-    /**************************************--Constructors--******************************************/
 
+    /**************************************--Constructors--******************************************/
 
     //Default parameters
     public Setup()
@@ -37,4 +37,50 @@ public class Setup {
         this.hp = hp;
     }
 
+
+    /*****************************************--Methods--********************************************/
+
+    public void Display_Setup()
+    {
+        System.out.println("\n--- Default parameter ---");
+        System.out.println("Map length  "+this.length);
+        System.out.println("Map width  "+this.width);
+        System.out.println("Foods number  "+this.food);
+        System.out.println("Commanders number  "+this.number_commanders);
+        System.out.println("Workers number  "+this.number_workers);
+        System.out.println("HP  "+this.hp);
+        System.out.println(" ---\n");
+    }
+
+
+    /*****************************************--Accessors--*****************************************/
+
+    public int GetLength()
+    {
+        return this.length;
+    }
+
+    public int GetWidth()
+    {
+        return this.width;
+    }
+
+    public int GetNbCommanders()
+    {
+        return this.number_commanders;
+    }
+
+    public int GetNbWorkers()
+    {
+        return this.number_workers;
+    }
+
+    public int GetNbFood()
+    {
+        return this.food;
+    }
+    public int GetHP()
+    {
+        return this.hp;
+    }
 }
