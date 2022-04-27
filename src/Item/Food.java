@@ -1,38 +1,31 @@
 package Item;
 
-public class Food extends Item_Basque{
+public class Food extends Start{
 
-    /***********************************************************************************************/
-    /*                                       Attributes                                             */
-    /***********************************************************************************************/
+    /**************************************--Attributes--********************************************/
+
     private int nbs ;
 
-    /***********************************************************************************************/
-    /*                                       Constructor                                          */
-    /***********************************************************************************************/
+    /**************************************--Constructors--******************************************/
 
-    public Food(int longueur,int largeur)
+    public Food(int length,int width)
     {
-        this.position_X = (int)(Math.random()*(largeur));
-        this.position_Y = (int)(Math.random()*(longueur));
+        this.position_X = (int)(Math.random()*(width));
+        this.position_Y = (int)(Math.random()*(length));
         this.nbs = 1;
 
-        System.out.println("//Creation d'un food en position "+this.position_X  +"  "+this.position_Y);
+        System.out.println("//Food creation on position "+this.position_X  +"  "+this.position_Y);
     }
 
 
-    /***********************************************************************************************/
-    /*                                       Destructeur                                           */
-    /***********************************************************************************************/
+    /**************************************--Destructors--******************************************/
     public void finalize()
     {
-        System.out.println("//Suppression du manger trouvÃ© en postion "+this.position_X  +"  "+this.position_Y);
+        System.out.println("//Food delete on position "+this.position_X  +"  "+this.position_Y);
     }
 
 
-    /***********************************************************************************************/
-    /*                                        Methodes                                             */
-    /***********************************************************************************************/
+    /*****************************************--Methods--********************************************/
     public void EditAddFood()
     {
         this.nbs += 1;
@@ -44,9 +37,7 @@ public class Food extends Item_Basque{
 
     }
 
-    /***********************************************************************************************/
-    /*                                        Accesseur                                            */
-    /***********************************************************************************************/
+    /*****************************************--Accessors--********************************************/
     public int GetNbs()
     {
         return this.nbs;
